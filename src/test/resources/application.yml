@@ -1,0 +1,15 @@
+server:
+  servlet:
+    context-path: /criteriaandspecification
+
+spring:
+  application:
+    name: criteria_and_specification
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=TRUE;INIT=RUNSCRIPT FROM 'classpath:init.sql'
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: 'create-drop'
+

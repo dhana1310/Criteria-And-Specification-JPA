@@ -1,0 +1,17 @@
+
+server:
+  port: 8085
+  servlet:
+    context-path: /criteriaandspecification
+
+spring:
+  application:
+    name: criteria_and_specification
+  datasource:
+    url: jdbc:mysql://localhost:3306/BikeStores
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
