@@ -1,0 +1,10 @@
+{
+  "searchInput": "@yahoo.com",
+  "filters": [],
+  "sortProperties": [
+    {
+      "property": "emailAndPhone",
+      "isDescending": true
+    }
+  ]
+}
