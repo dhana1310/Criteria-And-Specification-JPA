@@ -16,6 +16,7 @@ public class Product implements Serializable {
     private static final long serialVersionUID = 7833066659987626951L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id", nullable = false)
     private Integer productId;
 
@@ -23,11 +24,11 @@ public class Product implements Serializable {
     private String productName;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="brand_id", referencedColumnName = "brand_id",nullable = false)
+    @JoinColumn(name = "brand_code", referencedColumnName = "brand_code", nullable = false)
     private Brand brand;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="category_id", referencedColumnName = "category_id",nullable = false)
+    @JoinColumn(name = "category_code", referencedColumnName = "category_code", nullable = false)
     private Category category;
 
     @Column(name = "model_year", nullable = false)

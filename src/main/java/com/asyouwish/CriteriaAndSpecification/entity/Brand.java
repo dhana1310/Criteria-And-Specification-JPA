@@ -18,9 +18,9 @@ public class Brand implements Serializable {
     private static final long serialVersionUID = 5251051379158641639L;
 
     @Id
-    @Column(name = "brand_id", nullable = false)
-    private Integer brandId;
+    @Column(name = "brand_code",length = 10 ,nullable = false)
+    private String brandCode;
 
-    @Column(name = "brand_name", nullable = false)
-    private String brandName;
+    @Column(name = "brand_description",length = 50, nullable = false)
+    private String brandDescription;
 }

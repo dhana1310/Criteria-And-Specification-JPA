@@ -24,8 +24,9 @@ public class Order implements Serializable {
     @JoinColumn(name = "customer_id", referencedColumnName = "customer_id")
     private Customer customer;
 
-    @Column(name = "order_status", nullable = false)
-    private Byte orderStatus;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "order_status_code", referencedColumnName = "order_status_code", nullable = false)
+    private OrderStatus orderStatus;
 
     @Column(name = "order_date", nullable = false)
     private Date orderDate;

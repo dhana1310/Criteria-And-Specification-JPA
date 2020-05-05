@@ -11,16 +11,16 @@ import java.io.Serializable;
 
 @Data
 @Entity
-@Table(name = "categories")
+@Table(name = "order_status")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-public class Category implements Serializable {
+public class OrderStatus implements Serializable {
 
-    private static final long serialVersionUID = 6837164371047512720L;
+    private static final long serialVersionUID = 5211051379158641639L;
 
     @Id
-    @Column(name = "category_code", length = 10, nullable = false)
-    private String categoryCode;
+    @Column(name = "order_status_code",length = 10 ,nullable = false)
+    private String orderStatusCode;
 
-    @Column(name = "category_description",length = 50, nullable = false)
-    private String categoryDescription;
+    @Column(name = "order_status_description",length = 50, nullable = false)
+    private String orderStatusDescription;
 }

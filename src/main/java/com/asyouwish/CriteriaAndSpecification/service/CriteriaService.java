@@ -131,10 +131,10 @@ public class CriteriaService {
                 }
                 break;
             case "brand":
-                CriteriaAndSpecificationUtil.applySearchOnForeignKey(filter, predicates, productRoot, "brand", "brandName");
+                CriteriaAndSpecificationUtil.applySearchOnForeignKey(filter, predicates, productRoot, "brand", "brandDescription");
                 break;
             case "category":
-                CriteriaAndSpecificationUtil.applySearchOnForeignKey(filter, predicates, productRoot, "category", "categoryName");
+                CriteriaAndSpecificationUtil.applySearchOnForeignKey(filter, predicates, productRoot, "category", "categoryDescription");
                 break;
             case "productName":
                 if (filter.getOperator().equals(Operator.LIKE)) {
